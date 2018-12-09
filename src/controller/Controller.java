@@ -21,8 +21,11 @@ public class Controller implements Initializable{
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		this.carte = new CardView(new Carte(1,2,ServantClass.Ruler,"Jeanne d'arc",2000,2000));
+		this.carte = new CardView(new Carte(1,2,ServantClass.Ruler,"Jeanne d'arc",2000,2000),"file:src/assets/JA.png");
+		this.carte.setLayoutX(758);
 		this.hud.getChildren().add(this.carte);
+		CardView Iskandar = new CardView(new Carte(2,5,ServantClass.Rider,"Iskandar",3000,3000),"file:src/assets/Iskandar.png");
+		this.hud.getChildren().add(Iskandar);
 		
 	}
 

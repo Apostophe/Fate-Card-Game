@@ -7,8 +7,8 @@ import model.Carte;
 public class CardView extends ImageView{
 	private Carte card;
 	
-	public CardView(Carte card) {
-		super(new Image("file:src/assets/JA.png"));
+	public CardView(Carte card, String png) {
+		super(new Image(png));
 		this.card=card;
 		
 	}
