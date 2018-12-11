@@ -8,5 +8,9 @@ public class Card {
 		this.id=id;
 		this.name=name;
 	}
+	
+	public String toString() {
+		return ""+this.id+" : "+this.name;
+	}
 
 }
