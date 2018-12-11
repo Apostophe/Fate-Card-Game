@@ -32,11 +32,26 @@ public class MainTest {
 		d2.addCard(sc9);
 		d2.addCard(sc10);
 		
+		d1.shuffle();
+		d2.shuffle();
+		
 		Player p1 = new Player(h1,d1);
 		Player p2 = new Player(h2,d2);
 
+		
+		p1.drawCard();
+		p2.drawCard();
+		p2.drawCard();
+		
 		System.out.println(p1);
+		System.out.println(p2);
 
+		p1.attack(sc1, sc8);
+		
+		System.out.println(p1);
+		System.out.println(p2);
+
+		
 	}
 
 }

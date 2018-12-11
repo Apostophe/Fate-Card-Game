@@ -3,13 +3,14 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
 public class Deck implements Iterable<Card>{
 	
-	private ArrayList<Card> deck;
+	private List<Card> deck;
 	
 	public Deck () {
 		this.deck=new ArrayList<Card>();
@@ -25,7 +26,9 @@ public class Deck implements Iterable<Card>{
 		return this.deck.remove(0);
 	}
 	
-
+	public void shuffle() {
+		Collections.shuffle(this.deck);
+	}
 
 	@Override
 	public Iterator<Card> iterator() {
