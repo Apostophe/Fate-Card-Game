@@ -7,7 +7,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-public class Deck implements Iterable{
+public class Deck implements Iterable<Card>{
 	
 	private ArrayList<Card> deck;
 	
@@ -15,12 +15,20 @@ public class Deck implements Iterable{
 		this.deck=new ArrayList<Card>();
 	}
 	
-	public void ajouterAtk(int ajout) {
-		//this.deck.stream().reduce((x,y),x+=ajout);
+	public void addCard(Card c) {
+		this.deck.add(c);
 	}
+	
+	public Card drawCard() {
+		if (this.deck.size()==0)
+			throw new Error();
+		return this.deck.remove(0);
+	}
+	
+
 
 	@Override
-	public Iterator iterator() {
+	public Iterator<Card> iterator() {
 		return this.deck.iterator();
 	}
 	
