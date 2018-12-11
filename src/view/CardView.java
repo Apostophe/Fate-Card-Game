@@ -2,12 +2,12 @@ package view;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import model.Carte;
+import model.ServantCard;
 
 public class CardView extends ImageView{
-	private Carte card;
+	private ServantCard card;
 	
-	public CardView(Carte card, String png) {
+	public CardView(ServantCard card, String png) {
 		super(new Image(png));
 		this.card=card;
 		

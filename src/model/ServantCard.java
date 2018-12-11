@@ -1,6 +1,6 @@
 package model;
 
-public class Carte {
+public class ServantCard extends Card{
 	private int id;
 	private int rank;
 	private ServantClass servantClass;
@@ -8,11 +8,10 @@ public class Carte {
 	private int atk;
 	private int def;
 	
-	public Carte(int id, int rank, ServantClass servantClass, String name, int atk, int def) {
-		this.id = id;
+	public ServantCard(int id, int rank, ServantClass servantClass, String name, int atk, int def) {
+		super(id,name);
 		this.rank = rank;
 		this.servantClass = servantClass;
-		this.name = name;
 		this.atk = atk;
 		this.def = def;
 	}
