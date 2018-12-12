@@ -17,6 +17,7 @@ public class Player {
 	public void drawCard() {
 		this.hand.addCard(this.deck.drawCard());
 	}
+
 	
 	public void attack(Card c1, Card c2) {
 		((ServantCard) c2).loseDef(((ServantCard) c1).getAtk());

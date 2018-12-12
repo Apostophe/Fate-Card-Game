@@ -19,6 +19,7 @@ public class Game {
 	
 	
 	public void turn() {
+		
 		Scanner s = new Scanner(System.in);
 		int choixAttaque;
 		int choixAttaquant;
