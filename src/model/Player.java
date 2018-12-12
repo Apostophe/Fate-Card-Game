@@ -14,8 +14,8 @@ public class Player {
 		this.deck = new Deck();
 	}
 	
-	public void drawCard() {
-		this.hand.addCard(this.deck.drawCard());
+	public Card drawCard() {
+		return this.hand.addCard(this.deck.drawCard());
 	}
 
 	

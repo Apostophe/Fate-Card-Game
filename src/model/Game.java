@@ -25,6 +25,13 @@ public class Game {
 		int choixAttaquant;
 		if(turns%2==0) {
 			System.out.println("Au player 1 : ");
+			Card tmp = p1.drawCard();
+			System.out.println("Vous piochez : "+tmp+"\n Voulez vous le placer sur le terrain (O/N) : ");
+			
+			String c = s.nextLine();
+			if(c.equals("O"))
+				this.field1.add(tmp);
+			
 			
 			System.out.print("Choississez le servant à attaquer : ");
 			for(int i =0;i<field2.size();i++)
@@ -40,10 +47,18 @@ public class Game {
 			
 			choixAttaquant = s.nextInt();
 			
-			this.p1.attack(field1.get(choixAttaque-1), field2.get(choixAttaquant-2));
+			this.p1.attack(field1.get(choixAttaquant-1), field2.get(choixAttaque-1));
 			
 		}else{
 			System.out.println("Au player 2 : ");
+			
+			Card tmp = p2.drawCard();
+			System.out.println("Vous piochez : "+tmp+"\n Voulez vous le placer sur le terrain (O/N) : ");
+			
+			String c = s.nextLine();
+			if(c.equals("O"))
+				this.field2.add(tmp);
+			
 			System.out.print("Choississez le servant à attaquer : ");
 			for(int i =0;i<field1.size();i++)
 				System.out.print("\n\t "+(i+1)+")"+field1.get(i));
@@ -58,7 +73,7 @@ public class Game {
 			
 			choixAttaquant = s.nextInt();
 			
-			this.p1.attack(field2.get(choixAttaque-1), field1.get(choixAttaquant-2));
+			this.p1.attack(field2.get(choixAttaquant-1), field1.get(choixAttaque-1));
 		}
 		turns++;
 	}

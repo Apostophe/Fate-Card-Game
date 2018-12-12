@@ -38,19 +38,16 @@ public class MainTest {
 		Player p1 = new Player(h1,d1);
 		Player p2 = new Player(h2,d2);
 
+		Game g = new Game(p1,p2);
 		
-		p1.drawCard();
-		p2.drawCard();
-		p2.drawCard();
 		
-		System.out.println(p1);
-		System.out.println(p2);
-
-		p1.attack(sc1, sc8);
-		
-		System.out.println(p1);
-		System.out.println(p2);
-
+		g.placeCard(p1, p1.drawCard());
+		g.placeCard(p1, p1.drawCard());
+		g.placeCard(p2, p2.drawCard());
+		g.placeCard(p2,	p2.drawCard());
+		for(int i=0;i<5;i++) {
+			g.turn();
+		}
 		
 	}
 

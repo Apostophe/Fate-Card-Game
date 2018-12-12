@@ -72,7 +72,7 @@ public class ServantCard extends Card{
 	}
 	
 	public String toString() {
-		return super.toString()+", rang : "+this.rank+", Classe : "+this.servantClass+", Valeur d'attaque : "+this.atk+", Valeur de défense"+this.def;
+		return super.toString()+", rang : "+this.rank+", Classe : "+this.servantClass+", Valeur d'attaque : "+this.atk+", Valeur de défense : "+this.def;
 	}
 	
 }

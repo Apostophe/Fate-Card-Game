@@ -11,8 +11,9 @@ public class Hand implements Iterable<Card>{
 		this.hand=new ArrayList<Card>();
 	}
 	
-	public void addCard(Card c) {
+	public Card addCard(Card c) {
 		this.hand.add(c);
+		return c;
 	}
 	
 	public Card removeCard(Card c){
