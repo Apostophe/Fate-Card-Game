@@ -29,6 +29,9 @@ public class Player {
 		for(Card c:deck)
 			tmp+="\t"+c.toString()+"\n";
 		return tmp;
-		
+	}
+	
+	public Card playCard(Card c) {
+		return this.hand.removeCard(c);
 	}
 }
