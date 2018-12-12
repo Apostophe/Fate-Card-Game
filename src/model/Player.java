@@ -18,9 +18,10 @@ public class Player {
 		this.hand.addCard(this.deck.drawCard());
 	}
 	
-	public void attack(ServantCard c1, ServantCard c2) {
-		c2.loseDef(c1.getAtk());
+	public void attack(Card c1, Card c2) {
+		((ServantCard) c2).loseDef(((ServantCard) c1).getAtk());
 	}
+	
 	public String toString() {
 		String tmp = "Main : \n";
 		for(Card c:hand)

@@ -1,17 +1,20 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Game {
 	private Player p1,p2;
-	private Field field;
+	private ArrayList<Card> field1;
+	private ArrayList<Card> field2;
 	private static int turns = 0;
 	
 	
-	public Game(Player p1, Player p2, Field field) {
+	public Game(Player p1, Player p2) {
 		this.p1 = p1;
 		this.p2 = p2;
-		this.field = new Field();
+		this.field1 = new ArrayList<Card>();
+		this.field2 = new ArrayList<Card>();
 	}
 	
 	
